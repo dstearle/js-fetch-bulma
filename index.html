@@ -12,6 +12,9 @@
         <!-- Bulma CSS CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.css" integrity="sha512-SI0aF82pT58nyOjCNfyeE2Y5/KHId8cLIX/1VYzdjTRs0HPNswsJR+aLQYSWpb88GDJieAgR4g1XWZvUROQv1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+        <!-- Font Awesome Kit -->
+        <script src="https://kit.fontawesome.com/f5d212432e.js" crossorigin="anonymous"></script>
+        
         <!-- Font Awesome CDN -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
 
@@ -29,6 +32,41 @@
 
             <!-- Subtitle -->
             <h2 class="subtitle">Enter a zipcode to get the location info</h2>
+
+            <!-- Form -->
+            <form id="zipForm">
+
+                <div class="field">
+
+                    <div class="control has-icons-left has-icons-right">
+
+                        <!-- Zipcode Input -->
+                        <input 
+                            type="text" 
+                            class="input zip is-large"
+                            placeholder="Enter Zipcode"
+                        >
+
+                        <!-- Pin Icon -->
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-map-pin"></i>
+                        </span>
+
+                        <!-- Check Icon -->
+                        <span class="icon is-small is-right">
+                            <!-- <i class="fa fa-check"></i> -->
+                        </span>
+
+                        <!-- X Icon -->
+                        <span class="icon is-small is-right">
+                            <i class="fa-solid fa-xmark"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </form>
 
         </section>
 

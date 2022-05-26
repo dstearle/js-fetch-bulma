@@ -89,6 +89,27 @@
 
         </div>
 
+        <script>
+
+            // Listen for submit
+            document.querySelector('#zipForm').addEventListener('submit', getLocationInfo);
+
+            // Function to get location info
+            function getLocationInfo(e) {
+
+                // For testing
+                // console.log('123');
+
+                // Get zip value from input
+                const zip = document.querySelector('.zip').value;
+
+                // Prevents automatic submissions
+                e.preventDefault();
+
+            }
+
+        </script>
+
     </body>
 
 </html>

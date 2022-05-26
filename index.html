@@ -94,6 +94,9 @@
             // Listen for submit
             document.querySelector('#zipForm').addEventListener('submit', getLocationInfo);
 
+            // Listen for delete
+            document.querySelector('body').addEventListener('click', deleteLocation);
+
             // Function to get location info
             function getLocationInfo(e) {
 
@@ -207,6 +210,27 @@
                 // Show icon
                 document.querySelector(`.icon-${icon}`).style.display = 'inline-flex';
 
+
+            }
+
+            // Removes the location information from the output
+            function deleteLocation(e) {
+
+                if(e.target.className == 'delete') {
+
+                    // For testing the delete button
+                    // console.log(123);
+
+                    // Removes the message from the output div
+                    document.querySelector('.message').remove();
+
+                    // Removes the message from the output div
+                    document.querySelector('.icon-check').remove();
+
+                    // Sets the input to empty
+                    document.querySelector('.zip').value = '';
+
+                }
 
             }
 

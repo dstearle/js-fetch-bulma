@@ -108,7 +108,22 @@
 
                 // Make fetch request to get data from zippopotam API
                 fetch(`http://api.zippopotam.us/us/${zip}`)
-                    .then(response => response.json()) // then promise to map response to json
+                    .then(response => {
+
+                        // If bad response (such as an invalid or blank zipcode)
+                        if(response.status != 200) {
+
+                            // The alert message to be set to the output area
+                            document.querySelector('#output').innerHTML = 
+                                `
+                                    <article class="message message-body is-danger">Invalid Zipcode, please try again</article>
+                                `;
+
+                            throw Error(response.statusText); // For error text
+
+                        }
+
+                    }) 
                     .then(data => {
 
                         // For testing the data

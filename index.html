@@ -103,6 +103,19 @@
                 // Get zip value from input
                 const zip = document.querySelector('.zip').value;
 
+                // For testing zip
+                // console.log(zip);
+
+                // Make fetch request to get data from zippopotam API
+                fetch(`http://api.zippopotam.us/us/${zip}`)
+                    .then(response => response.json()) // then promise to map response to json
+                    .then(data => {
+
+                        // For testing the data
+                        console.log(data);
+
+                    });
+
                 // Prevents automatic submissions
                 e.preventDefault();
 

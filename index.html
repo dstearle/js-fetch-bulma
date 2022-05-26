@@ -116,7 +116,13 @@
                             // The alert message to be set to the output area
                             document.querySelector('#output').innerHTML = 
                                 `
-                                    <article class="message message-body is-danger">Invalid Zipcode, please try again</article>
+                                    <article class="message is-danger">
+
+                                        <div class="message-body">
+                                            Invalid Zipcode, please try again
+                                        </div>
+
+                                    </article>
                                 `;
 
                             throw Error(response.statusText); // For error text

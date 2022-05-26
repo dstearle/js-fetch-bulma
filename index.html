@@ -113,6 +113,9 @@
                         // If bad response (such as an invalid or blank zipcode)
                         if(response.status != 200) {
 
+                            // The icon to be used
+                            showIcon('remove');
+
                             // The alert message to be set to the output area
                             document.querySelector('#output').innerHTML = 
                                 `
@@ -132,6 +135,9 @@
                         // Else return a normal json map
                         else {
 
+                            // The icon to be used
+                            showIcon('check');
+
                             return response.json();
 
                         }
@@ -147,6 +153,20 @@
 
                 // Prevents automatic submissions
                 e.preventDefault();
+
+            }
+
+            // Displays the correct icon when a zip code is submitted
+            function showIcon(icon) {
+
+                // Clears current icons (if there are any)
+                document.querySelector('.icon-remove')
+                .style.display = 'none';
+                document.querySelector('.icon-check').style.display = 'none';
+
+                // Show icon
+                document.querySelector(`.icon-${icon}`).style.display = 'inline-flex';
+
 
             }
 
